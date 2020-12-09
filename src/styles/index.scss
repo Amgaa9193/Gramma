@@ -1,0 +1,85 @@
+* {
+	margin: 0px;
+	padding: opx;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'IBM Plex Serif', serif;
+	background-color: #f6f5f0;
+	color: #141412;
+	min-height: 100vh;
+}
+
+nav {
+	margin: 10px 25px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 10px;
+}
+.nav-links {
+	display: flex;
+	list-style: none;
+}
+
+.nav-links li {
+	padding-left: 10px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.mic {
+	font-size: 40px;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	cursor: pointer;
+	transform: translate(-50%, -30%);
+}
+
+.input-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #f6f5f0;
+	font-size: 32px;
+	color: #141412;
+}
+
+.edit-button {
+	display: none;
+	background: white;
+	color: #d88771;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.output-container {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-40%, -50%);
+	font-size: 32px;
+}
+
+.check-btn {
+	background-color: #f6f5f0;
+	color: #d88771;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border: none;
+	font-size: 25px;
+}
+
+.check-btn:hover {
+	background: #d88771;
+	color: white;
+	border-radius: 4%;
+}
