@@ -36,6 +36,13 @@ if(chromeAgent) {
         recognition.start();
         onclick.innerText = 'Gramma is listening...';
     })
+    
+    checkbtn.addEventListener('click', () => {
+        outputtext.style.color = 'green'; 
+    })
+    
+    
+    // functions  
     recognition.onsoundend = function() {
         onclick.innerText = "";
     }
