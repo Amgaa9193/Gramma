@@ -34,10 +34,8 @@ if(chromeAgent) {
     })
     
     
-    // functions 
-    
+    // functions  
     recognition.onsoundend = function() {
-        
         onclick.innerText = "";
     }
     
