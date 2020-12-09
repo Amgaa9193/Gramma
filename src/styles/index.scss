@@ -15,16 +15,22 @@ nav {
 	margin: 10px 25px;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
 	min-height: 10px;
 }
+
+.gramma-logo {
+	height: 80px;
+	width: 80px;
+}
+
 .nav-links {
 	display: flex;
 	list-style: none;
 }
 
 .nav-links li {
-	padding-left: 10px;
+	padding-left: 15px;
 	font-size: 20px;
 	cursor: pointer;
 }
@@ -70,12 +76,14 @@ nav {
 }
 
 .check-btn {
+	margin-left: 10px;
 	background-color: #f6f5f0;
 	color: #d88771;
 	cursor: pointer;
 	transition: all 0.3s ease;
 	border: none;
 	font-size: 25px;
+	outline: none;
 }
 
 .check-btn:hover {
