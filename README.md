@@ -1,6 +1,6 @@
 <!-- Write Project proposal here!!! -->
 
-GFIXER is a user interferace(kids friendly/ elder people friendly) voice grammar application for those who struggle with simple sentence structure in English.
+Gramma is a user interferace(kids friendly/ elder people friendly) voice grammar application for those who struggle with simple sentence structure in English.
 I will use API to accurately convert speech into text, and I will use Gramma Api to correct the sentence.
 After getting the correct sentence, user will be able to play with the words.
 
@@ -15,7 +15,7 @@ Design structure
 ![Getting Started](./src/images/Homepage.png)
 
 Architecture and Technologies
-GFIXER uses the following technologies:
+Gramma uses the following technologies:
 
 1. Speech-to-text google API for converting audio to text,
 2. Grammar API for correcting the text.
