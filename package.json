@@ -1,9 +1,8 @@
 {
-  "name": "g_fixer",
+  "name": "gramma",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-
   "browserslist": [
     "last 1 version",
     "> 1%",
@@ -11,11 +10,12 @@
     "not dead"
   ],
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.js",
-    "watch": "webpack --watch --config webpack.dev.js",
+    "start": "node server.js",
+    "start:debug": "DEBUG=* node server.js",
+    "webpack:start": "webpack-dev-server --config webpack.dev.js",
+    "webpack:watch": "webpack --watch --config webpack.dev.js",
     "webpack:build": "webpack --config webpack.prod.js  --optimize-minimize"
   },
-
   "author": "amgaa",
   "license": "ISC",
   "devDependencies": {
@@ -36,6 +36,10 @@
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^4.2.2",
+    "axios": "^0.21.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
   }
 }
