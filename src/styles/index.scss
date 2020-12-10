@@ -4,22 +4,34 @@
 	box-sizing: border-box;
 }
 
+:root {
+	--primary-color: #f3f1e7;
+}
+
 body {
 	font-family: 'IBM Plex Serif', serif;
-	background-color: #f6f5f0;
+	background-color: var(--primary-color);
 	color: #141412;
 	min-height: 100vh;
 }
 
+.border {
+	margin: 30px;
+	border: solid #f3f1e7 10px;
+	border-radius: 15px;
+	box-shadow: -3px -3px 7px #e7e6e0, 3px 3px 5px #cac6b2;
+}
+
 nav {
-	margin: 10px 25px;
+	margin: 10px;
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	min-height: 10px;
 }
 
 .gramma-logo {
+	margin-left: -50px;
 	height: 80px;
 	width: 80px;
 	cursor: pointer;
@@ -39,9 +51,12 @@ nav {
 .mic {
 	font-size: 40px;
 	position: absolute;
-	top: 30%;
+	top: 40%;
 	left: 50%;
 	cursor: pointer;
+}
+.on-click {
+	margin-top: 10px;
 	transform: translate(-50%, -30%);
 }
 
@@ -53,7 +68,7 @@ nav {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background-color: #f6f5f0;
+	background-color: transparent;
 	font-size: 32px;
 	color: #141412;
 }

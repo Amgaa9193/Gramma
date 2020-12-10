@@ -13,7 +13,7 @@ const checkbtn = document.querySelector('.check-btn');
 const outputtext = document.querySelector('.output-text')
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-// const SpeechSynthesisUtterance = window.SpeechSynthesisUtterance
+const SpeechSynthesisUtterance = window.SpeechSynthesisUtterance
 const recognition = new SpeechRecognition();
 
 // let userAgentString = window.navigator.userAgent;
@@ -31,30 +31,29 @@ function buildAssetPath(imgSrc) {
 
 // if(chromeAgent) {
 
-    function grammaSays(voiceName) {
-        if ('speechSynthesis' in window) {
+    function grammaSays(voice) {
             const synth = window.speechSynthesis;
-            const text = 'Hello, my dear!'
-            const utter = new window.SpeechSynthesisUtterance('Hello, my dear!');
+            const text = 'Welcome to Grammas!'
+            const utter = new SpeechSynthesisUtterance(text);
 
-            utter.volume = 1;
-            utter.rate = 0.5;
+            utter.volume = 0.8;
+            utter.rate = 0.7;
             utter.pitch = 1;
-            utter.voice = voiceName;
-            utter.lang = voiceName.lang;
+            utter.voice = voice;
+            utter.lang = voice.lang;
 
-            console.log(synth);
-            console.log(utter);
+            // console.log(synth);
+            // console.log(utter);
 
             synth.speak(utter);
 
             utter.onerror = function(event) {
                 console.log(event.error);
-                console.log(utter);
             }
-        }
     }
 
+
+    // for chrome 
     function getVoices() {}
     getVoices()
     if( speechSynthesis !== undefined) {
@@ -72,7 +71,7 @@ function buildAssetPath(imgSrc) {
         const voices = synth.getVoices();
         voices.forEach(voice => {
             // console.log(voice)
-            if(voice.name === 'Nora Siri') {
+            if(voice.name === 'Moira') {
                 grammaSays(voice);
             }
         })
@@ -112,6 +111,7 @@ function buildAssetPath(imgSrc) {
 
 
     checkbtn.addEventListener('click', () => {
+        // add transition ease 2sec style
         outputtext.innerText = 'Thank you for talking to Gramma.';
 
         setInterval(() => {
