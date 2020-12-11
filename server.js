@@ -39,7 +39,7 @@ app.post('/grammarcheck', (req, res) => {
     }).catch((err) => {
         res.send(err)
     })
-})
+});
 
 
 
