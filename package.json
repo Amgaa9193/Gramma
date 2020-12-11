@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "engine": {
-    "node": ">=8.1.0"
+    "node": "12.18.4"
   },
 
   "browserslist": [
