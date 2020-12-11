@@ -4,7 +4,19 @@ const path = require("path");
 const fetch = require("node-fetch");
 require("dotenv").config();
 const grammarToken = process.env.GRAMMAR_API_KEY
-// use fetch
+
+const PORT = process.env.PORT || 8000; 
+
+app.use(express.static("dist"));
+
+app.get("/", (request, res) => {
+    res.sendFile(path.join(__dirname, "./dist/index.html"));
+})
+
+app.listen(PORT, () => {
+    console.log(__dirname);
+    console.log(`listening on ${PORT}`);
+});
 
 app.post('/grammarcheck', (req, res) => {
     // console.log(req.query.text)
@@ -30,17 +42,6 @@ app.post('/grammarcheck', (req, res) => {
 })
 
 
-const PORT = process.env.PORT || 8000; 
 
-app.use(express.static("dist"));
-
-app.get("/", (request, res) => {
-    res.sendFile(path.join(__dirname, "./dist/index.html"));
-})
-
-app.listen(PORT, () => {
-    console.log(__dirname);
-    console.log(`listening on ${PORT}`);
-});
 
 
