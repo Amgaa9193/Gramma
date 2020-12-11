@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engine": {
+    "node": ">=8.1.0"
+  },
+
   "browserslist": [
     "last 1 version",
     "> 1%",
