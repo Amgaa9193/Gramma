@@ -6,7 +6,6 @@
   "engine": {
     "node": "12.18.4"
   },
-
   "browserslist": [
     "last 1 version",
     "> 1%",
