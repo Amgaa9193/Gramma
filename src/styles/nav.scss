@@ -1,0 +1,46 @@
+nav {
+	/* border: solid #ebe8dc 5px;
+	border-radius: 10px;
+	box-shadow: inset -3px -3px 7px #e7e6e0, inset 3px 3px 5px #cac6b2; */
+	margin-top: 10px;
+	height: 15vh;
+	width: 94.5vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	min-height: 10px;
+}
+
+.gramma-logo {
+	/*display: none;*/
+	margin-left: -20px;
+	height: 90px;
+	width: 90px;
+	cursor: grab;
+}
+
+.gramma-logo:hover {
+	animation-name: rotate;
+	animation-iteration-count: infinite;
+	animation-duration: 0.5s;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotateX(15deg);
+	}
+	100% {
+		transform: rotateY(15deg);
+	}
+}
+
+.nav-links {
+	display: flex;
+	list-style: none;
+}
+
+.nav-links li {
+	padding-left: 20px;
+	font-size: 25px;
+	cursor: pointer;
+}

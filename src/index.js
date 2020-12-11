@@ -2,9 +2,14 @@
 import "./styles/index.scss";
 import axios from 'axios';
 import gramma from './images/gramma3.png'
+import bubble from './images/bubbles.png';
+
+const instructionBtn = document.querySelector('#instruction-btn');
+const instruction = document.querySelector('.instruction-popup');
+
 
 const mic = document.querySelector('.mic');
-const onclick = document.querySelector('.on-click');
+const onclick = document.querySelector('.on-click');;
 const inputText = document.querySelector('.input-text');
 const outputText = document.querySelector('.output-text');
 
@@ -30,15 +35,44 @@ function buildAssetPath(imgSrc) {
 }
 
 // if(chromeAgent) {
+    // instruction form pop-up
+    instructionBtn.addEventListener('click', () => {
+        const synth = window.speechSynthesis;
+        const voices = synth.getVoices();
+        voices.forEach(voice => {
+            // console.log(voice)
+            if(voice.name === 'Moira') {
+                grammaSays(voice);
+            }
+        })
+        instruction.style.display = "block"
+
+        setInterval(() => {
+            instruction.style.display = "none"
+        }, 9000)
+        // grammaImage.style.display = 'block'
+    })
+
+    // body.addEventListener('click', () =>{
+    //     instruction.style.display = "block"
+    // })
+
+    const bubbleImage = document.createElement('img');
+    bubbleImage.classList.add('speech-bubble')
+    bubbleImage.src = buildAssetPath(bubble);
+
+
+      
 
     function grammaSays(voice) {
             const synth = window.speechSynthesis;
-            const text = 'Welcome to Grammas!'
+            // alternative: "Let Gramma dot your i's and cross your t's!"
+            const text = "Welcome to gramma's"
             const utter = new SpeechSynthesisUtterance(text);
 
-            utter.volume = 0.8;
+            utter.volume = 0.5;
             utter.rate = 0.7;
-            utter.pitch = 1;
+            utter.pitch = 0.7;
             utter.voice = voice;
             utter.lang = voice.lang;
 
@@ -60,26 +94,18 @@ function buildAssetPath(imgSrc) {
         speechSynthesis.onvoiceschanged = getVoices;
     }
 
-    const image = document.createElement('img');
-    image.classList.add('gramma-logo')
-    image.src = buildAssetPath(gramma);
+    const grammaImage = document.createElement('img');
+    grammaImage.classList.add('gramma-logo')
+    grammaImage.src = buildAssetPath(gramma);
     const currentNav = document.querySelector('nav');
-    currentNav.prepend(image)
+    currentNav.prepend(grammaImage)
 
-    image.addEventListener('click', () => {
-        const synth = window.speechSynthesis;
-        const voices = synth.getVoices();
-        voices.forEach(voice => {
-            // console.log(voice)
-            if(voice.name === 'Moira') {
-                grammaSays(voice);
-            }
-        })
-    })
+    // microphone
+    // web speech API
 
-
-    // event listener
     mic.addEventListener('click', () => {
+        instruction.style.display = "none";
+        // grammaImage.style.display = 'none'
         recognition.start();
         onclick.innerText = 'Gramma is listening...';
     })
@@ -98,12 +124,14 @@ function buildAssetPath(imgSrc) {
 
         fetchOutput(sentenceCase)
         .then( output => {
-            console.log(output)
+            // console.log(output)
             if(output.data.matches.length > 0) {
                 const solution = output.data.matches[0].replacements[0].value;
                 outputText.innerText = 'Gramma suggests using ' + '"' + solution + '"' + '.';
+                checkbtn.innerHTML = '<i class="fas fa-check-circle"></i>'
             } else {
                 outputText.innerText = 'Gramma thinks you are correct';
+                checkbtn.innerHTML = '<i class="fas fa-check-circle"></i>'
                 
             }
         });
@@ -111,12 +139,11 @@ function buildAssetPath(imgSrc) {
 
 
     checkbtn.addEventListener('click', () => {
-        // add transition ease 2sec style
         outputtext.innerText = 'Thank you for talking to Gramma.';
-
         setInterval(() => {
             inputText.innerText = '';
             outputtext.innerText = '';
+            checkbtn.innerHTML = '';
         }, 2000) 
     })
     
@@ -128,6 +155,8 @@ function buildAssetPath(imgSrc) {
 // } else {
 //     console.log('This browser is not compatible with this web application.')
 // }
+
+
 
 
 
