@@ -6,9 +6,10 @@ After getting the correct sentence, user will be able to play with the words.
 
 MVPs
 
-1. Convert voice into text, gives the user option to edit the sentence by typing. has an instruction button.
-2. Display the original text with the error-free version belove it, highlights the part where it needed correcting.
-3. mini game where user can rearrange the words
+1. Convert voice into text.
+2. Instruction animated popout modal? with speech.
+3. Display the original text with gramma's suggestion.
+
 
 Design structure
 

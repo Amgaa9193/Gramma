@@ -1,11 +1,19 @@
-@import './nav.scss';
 @import './reset.scss';
-@import './content.scss';
 @import './color.scss';
+@import './nav.scss';
+@import './instruction.scss';
+@import './content.scss';
 
 body {
 	font-family: 'IBM Plex Serif', serif;
 	background-color: $backround-color;
 	color: $main-fontcolor;
 	height: 90vh;
+}
+
+.border {
+	margin: 30px;
+	border: solid $border-color 1px;
+	border-radius: 15px;
+	box-shadow: -3px -3px 7px $top-shadow, 3px 3px 5px $bottom-shadow;
 }

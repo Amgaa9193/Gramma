@@ -1,13 +1,5 @@
 @import './color.scss';
 
-.border {
-	margin: 30px;
-	border: solid $border-color 2px;
-	border-radius: 15px;
-	box-shadow: -3px -3px 7px $top-shadow, 3px 3px 5px $bottom-shadow;
-	object-fit: contain;
-}
-
 .content {
 	/* border: solid #ebe8dc 5px; 
 	border-radius: 10px;
@@ -15,10 +7,11 @@
 	border: solid black 2px;*/
 	position: relative;
 	height: 72vh;
-	width: 94.5vw;
+	width: 95.5vw;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	overflow: hidden;
 }
 
 .mic {
@@ -29,100 +22,50 @@
 	cursor: pointer;
 }
 
-.on-click {
-	margin-top: 15px;
-	transform: translate(-50%, -40%);
+.mic-content {
+	display: flex;
+	font-size: 40px;
+	/*border: solid black 2px;*/
+	position: absolute;
+	top: 40%;
+	left: 32%;
+	width: 100%;
 }
 
-/*.input-container {
-}*/
-
 .input-text {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	margin: 20px;
+	font-size: 32px;
 	position: absolute;
 	top: 55%;
-	left: 50%;
+	left: 70%;
 	transform: translate(-50%, -50%);
-	background-color: transparent;
-	font-size: 32px;
-	color: #141412;
+	width: 100%;
+}
+
+h6 {
+	padding: 10px;
 }
 
 .output-container {
-	margin-top: 30px;
+	margin: 20px;
 	display: flex;
 	align-items: center;
 	position: absolute;
 	top: 60%;
-	left: 50%;
-	transform: translate(-40%, -50%);
+	left: 30%;
 	font-size: 32px;
+	width: 100%;
 }
 
 .check-btn {
-	margin-left: 10px;
-	background-color: transparent;
 	cursor: pointer;
-	transition: all 0.4s ease;
+	margin-left: 5px;
 	border: none;
-	font-size: 25px;
 	outline: none;
+	font-size: 25px;
+	transition: all 0.4s ease;
 }
 
 .check-btn:hover {
-	border-radius: 50px;
-	background: transparent;
 	color: $btn-color;
-	border-radius: 4%;
-}
-
-/* The popup instruction - hidden */
-.instruction-popup {
-	display: none;
-	position: fixed;
-	height: 27vh;
-	width: 27vw;
-	margin-top: 20px;
-	margin-left: 70px;
-	/*border: solid $border-color 6px;*/
-	border-radius: 40px;
-	box-shadow: -3px -3px 7px $top-shadow, 7px 30px 40px $bottom-shadow;
-	transition: 0.5s;
-	animation: speech .7s linear 1;
-	overflow: hidden;
-	animation-name: slidein, fadeInOut;
-	animation-delay: 0, 9s;
-	animation-duration: 6s, 9.2s;
-}
-
-.instruction-content {
-	padding-top: 40px;
-	padding-left: 20px;
-	padding-right: 20px;
-}
-
-@keyframes slidein {
-	from {
-		height: 0%;
-		width: 0%;
-	}
-
-	50% {
-		height: 28%;
-		width: 28%;
-	}
-}
-
-@keyframes fadeInOut {
-	50% {
-		height: 28%;
-		width: 28%;
-	}
-
-	100% {
-		height: 0%;
-		width: 0%;
-	}
 }
