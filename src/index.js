@@ -6,10 +6,6 @@ import bubble from './images/bubbles.png';
 
 const instructionBtn = document.querySelector('#instruction-btn');
 const instruction = document.querySelector('.instruction-popup');
-const portfolio = document.querySelector('#portfolio-btn')
-const github = document.querySelector('#github-btn')
-const linkedin = document.querySelector('#linked-btn')
-const angellist = document.querySelector('#angel-btn')
 
 const mic = document.querySelector('.mic');
 const onClick = document.querySelector('.on-click');;
@@ -39,19 +35,7 @@ function buildAssetPath(imgSrc) {
     return `./${imgSrc}`
 }
 
-// links
-// portfolio.addEventListener('click', () => {
-    
-// })
-// github.addEventListener('click', () => {
 
-// })
-// linkedin.addEventListener('click', () => {
-
-// })
-// angellist.addEventListener('click', () => {
-
-// })
 
 // if(chromeAgent) {
 // instruction form pop-up
