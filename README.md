@@ -1,7 +1,7 @@
 <!-- Write Project proposal here!!! -->
 
-Gramma is a user interferace voice-to-text grammar application for those who struggle with simple sentence structure in English.
-I will use speech-API to accurately convert speech into text, and I will use Grammar Api to correct the sentence.
+Gramma is a user interferace voice-to-text grammar application for those who need help with simple sentence structures in English.
+
 
 
 ![](./src/images/gramma-gif.gif)
