@@ -4,6 +4,8 @@ Gramma is a user interferace voice-to-text grammar application for those who str
 I will use speech-API to accurately convert speech into text, and I will use Grammar Api to correct the sentence.
 
 
+![](./src/images/gramma-gif.gif)
+
 MVP:
 
 1. Convert voice into text.
